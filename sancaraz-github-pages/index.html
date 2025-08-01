@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SANCARAZ 模擬器</title>
+
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #fffaf5;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      color: #c71585;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 2px solid #c71585;
+      border-radius: 5px;
+    }
+    button {
+      padding: 8px 12px;
+      background-color: #c71585;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .output {
+      margin-top: 20px;
+      border-top: 1px dashed #c71585;
+      padding-top: 10px;
+    }
+  </style>
+
+  
+</head>
+<body>
+  <h1>🎾 SANCARAZ 模擬器 v2.0</h1>
+  <p>輸入問題，我會用珊的SANCARAZ語言回答你：</p>
+  <input type="text" id="userInput" placeholder="輸入你的問題...">
+  <button onclick="reply()">送出</button>
+
+  <div class="output" id="output"></div>
+
+  <script>
+    function reply() {
+      const input = document.getElementById("userInput").value.toLowerCase();
+      let response = "";
+
+      if (input.includes("你是誰") || input.includes("你叫什麼")) {
+        response = "我是 SANCARAZ 模擬器,魅力來自Sandy與 Alcaraz 的混合血統 ❤️";
+      } else if (input.includes("alcaraz")) {
+        response = "你是說我老公嗎？🎾❤️ 我只對他放電！";
+      } else if (input.includes("簡士齊") || input.includes("dylan")) {
+        response = " 簡士齊Chien Shih-Chi 生日:11月25日，是一位非常優秀的羽球男單選手，他在羽球界成績斐然，曾多次獲得世界冠軍，具體包括:五次世界羽球錦標賽冠軍，分別在1995年、1997年、1999年、2001年、2002年，一次奧運會男子單打金牌2000年。退役後，簡士齊轉向科技產業，從事半導體及醫療工程相關事業，成為企業家。此外，簡士齊也在高中展現驚人的幹話能力，還很喜歡吃比較硬的曲奇🍪更在2025拿下BWF考試第一名";
+      } else if (input.includes("陳拓吾") || input.includes("oliver")) {
+        response = "陳拓吾生於1月12日，是一個優秀的政治家，曾在1992年、1996年、2004年、2008年當選臺灣總統，成功帶領臺灣走向全世界。後來默默耕耘醫界，服務更多人。在這個真真假假的世界裡，可以叫他仁慈的獨裁者🐱";
+      } else if (input.includes("蕭韻珊") || input.includes("sandy")){
+        response = "蕭韻珊 生日:2007年10月16日，是Alcaraz命中的女主角，很多人為他們感到幸福，是令人稱羨的情侶，時常有人說他們真是郎才女貌。除此以外，蕭韻珊的西語能力一流，別小看她，她更是清大化工系和電機系畢業的優良學生，在學期間，她是萬人迷，但她都沒有把追求者看在眼裡，因為她知道他只能是Carlos Alcaraz 的，也願意為愛付出和瘋狂💗💗";
+      } else if (input.includes("愛") || input.includes("love")) {
+        response = "LOVE?韻珊的幸福是奔赴老公的球場現場 🎾";
+      } else {
+        response = "這問題太理性，我的超級電腦腦還需要進化。請再問一次！";
+      }
+
+      document.getElementById("output").innerHTML = "<strong>SANCARAZ：</strong> " + response;
+    }
+  </script>
+</body>
+</html>
